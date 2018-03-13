@@ -16,6 +16,7 @@ body {
   height: auto !important;
   height: 100%;
   position: relative;
+  padding-bottom: 58px;
 }
 h1, h2, p, a {
   font-weight: 100;
@@ -172,6 +173,7 @@ hr {
 }
 .apps .app-inner .app:hover {
   cursor: pointer;
+  border: 2px solid #495058;
 }
 .apps .app-inner .app img {
   width: 161px;
@@ -185,7 +187,11 @@ hr {
   font-size: 27px;
   border: 1px solid #f2d13e;
   border-radius: 26px;
-  padding-top: 9px;;
+  padding-top: 9px;
+}
+.apps .app-inner .app:hover .button {
+  border: 1px solid #ffd100;
+  color: #ffd100;
 }
 .round-apps {
   width: 100%;

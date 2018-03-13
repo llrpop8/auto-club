@@ -12,8 +12,17 @@ $(document).ready(() => {
     pageDots: false,
     groupCells: 2,
   });
+  let showMore = true;
   $('#btn').click(() => {
-    $('#info').slideDown(600);
+    if (showMore) {
+      $('#info').slideDown(600);
+      $('#btn').html('less');
+      showMore = false;
+    } else {
+      $('#info').slideUp(600);
+      $('#btn').html('more');
+      showMore = true;
+    }
   });
   $(window).scroll(() => {
     let windowScroll = $(window).scrollTop();
@@ -21,7 +30,7 @@ $(document).ready(() => {
     let documentHeight = $(document).height();
 
     if ((windowScroll + windowHeight) == documentHeight) {
-      $(".app-inner").clone().appendTo(".apps"); ;
+      $(".app-inner").clone().appendTo(".apps");
     }
   })
 });
